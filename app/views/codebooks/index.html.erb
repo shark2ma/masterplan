@@ -1,0 +1,25 @@
+<h1>Listing codebooks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @codebooks.each do |codebook| %>
+  <tr>
+    <td><%= codebook.title %></td>
+    <td><%= codebook.code %></td>
+    <td><%= link_to 'Show', codebook %></td>
+    <td><%= link_to 'Edit', edit_codebook_path(codebook) %></td>
+    <td><%= link_to 'Destroy', codebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Codebook', new_codebook_path %>

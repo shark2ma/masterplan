@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @codebook.title %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @codebook.code %>
+</p>
+
+
+<%= link_to 'Edit', edit_codebook_path(@codebook) %> |
+<%= link_to 'Back', codebooks_path %>
